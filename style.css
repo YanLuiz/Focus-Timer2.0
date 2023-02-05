@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+}
+
+
+
+:root {
+    font-size: 62.5%;
+    --ff-display: 'Roboto', sans-serif
+}
+
+
+.page {
+ 
+    justify-self: center;
+    display: flex;
+    gap: 19.2rem;
+}
+
+section {
+    align-self: center;
+    justify-self: center;
+}
+
+.display {
+    justify-content: center;
+    display: flex;
+    font-size: 12rem;
+    gap: 1rem;
+    color: #323238;
+    font-family: var(--ff-display);
+}
+.hide {
+    background-color: #02799D;
+}
+
+.controls {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.controls button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.controls button img:hover{
+    transform: scale(1.05);
+    transition: all ease 200ms;
+}
+
+.controls button img:active{
+    transform: scale(1);
+}
+
+.musicThemes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+
+}
+
+
+.musicThemes button {
+    width: 13.8rem;
+    height: 15.2rem;
+    border: none;
+    border-radius: 2.4rem;
+    background-color: #E1E1E6;
+    cursor: pointer
+}
+
+.musicThemes button:hover{
+    transform: scale(1.1);
+    transition: all ease 200ms;
+}
+
+.musicThemes button:active{
+    transform: scale(1);
+    transition: all ease 50ms
+}
+
+@media (max-width:900px){
+    .page{
+        gap: 15rem;
+    }
+    .musicThemes button {
+        width: 9.66rem;
+        height: 10.64rem;       
+    }
+    .display{
+        font-size: 8.4rem;
+        gap: 0.7rem;
+    }
+
+    .controls {
+        gap: 2.8rem;
+    }
+
+    .controls button {
+        width: 3.36rem;
+        height: 3.36rem;
+    }
+    .musicThemes button img {
+        width: 45%;
+    }
+    
+}
+
+
+@media (max-width: 700px){
+    .page{
+        gap: 10rem;
+    }
+}
+
+
+
+@media (max-width: 565px) {
+
+    .page{
+        gap: 5rem;
+    }
+    .musicThemes button {
+        width: 6.9rem;
+         height: 7.6rem;
+    }
+    .musicThemes button img {
+        width: 45%;
+    }
+
+    .musicThemes {
+        gap: 1.6rem
+    }
+}
+
+
+@media(max-width: 500px){
+    .musicThemes{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .page {
+        flex-direction: column;
+        align-self: center;
+    }
+}
+@media(max-width: 350px){
+    .musicThemes{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
